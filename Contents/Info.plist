@@ -4,9 +4,42 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.plexapp.plugins.audioaddict</string>
+	
 	<key>PlexFrameworkVersion</key>
 	<string>2</string>
+	
 	<key>PlexClientPlatforms</key>
 	<string>*</string>
+	
+	<!-- the docs say Content is the default value. So what is Channel? -->
+	<key>PlexPluginClass</key>
+	<string>Content</string>
+	
+	<!-- Stops the plugin being overwritten -->
+	<key>PlexPluginDevMode</key>
+	<string>1</string>
+
+    <!-- This is used to send plugin log statements directly to stout when running PMS from the command line. Rarely used anymore-->
+<!--     <key>PlexPluginConsoleLogging</key> -->
+<!--     <string>1</string>		 -->
+
+	<key>PlexPluginCodePolicy</key>
+	<string>Elevated</string>
+	
+	<key>PlexFrameworkFlags</key>
+	<array>
+		<string>LogModelClassGeneration</string>
+		<string>LogMetadataCombination</string>
+	</array>	
+<!--
+	<key>CFBundleExecutable</key>
+	<string>C:\Development\Python27-x32\python.exe</string>
+-->
+	<key>CFBundleVersion</key>
+	<string>0.1</string>
+	
+<!-- 	<key>PlexPluginMode</key> -->
+<!-- 	<string>AlwaysOn</string> -->
+		
 </dict>
 </plist>
