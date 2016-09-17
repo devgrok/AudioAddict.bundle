@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AudioAddict.bundle.iml" filepath="$PROJECT_DIR$/AudioAddict.bundle.iml" />
+      <module fileurl="file://C:/PlexData/Plex Media Server/Plug-ins/Framework.bundle/Framework.bundle.iml" filepath="C:/PlexData/Plex Media Server/Plug-ins/Framework.bundle/Framework.bundle.iml" />
+    </modules>
+  </component>
+</project>
