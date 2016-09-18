@@ -1,7 +1,7 @@
 """Plex plugin for AudioAddict (sky.fm, di.fm, etc)."""
 # pylint: disable=undefined-variable, relative-import, invalid-name, line-too-long
 
-import sys
+import sys, inspect
 
 # print 'sys.path:\n\t' + '\n\t'.join(sys.path)
 
@@ -85,7 +85,7 @@ def MusicMainMenu():
         oc.add(DirectoryObject(
             key=Callback(GetChannels, serv=serv),
             title=services[serv]['name'],
-            thumb=services[serv]['image']
+            thumb=Resource.ContentsOfURLWithFallback(services[serv]['image'], fallback=ICON)
         ))
     oc.view_group = 'AudioAddict:Pictures'
     return oc
@@ -177,7 +177,7 @@ def CreateChannelObject(
     debug_summary.append(summary)
     if Prefs['debug']:
         debug_summary.append('[%s, %s]' % (fmt, bitrate))
-        debug_summary.append('[%s]' % url)
+        debug_summary.append('%s/%s' % (serv, channel))
 
     # depending on the detail level (channel listing or viewing one channel) the
     artistVal = None # maps to grandparentTitle in xml
@@ -216,6 +216,7 @@ def CreateChannelObject(
         summary=' '.join(debug_summary),
         thumb=Resource.ContentsOfURLWithFallback(thumb),
         art=art_url,
+        source_title=serv,
         items=[
             MediaObject(
                 parts=[

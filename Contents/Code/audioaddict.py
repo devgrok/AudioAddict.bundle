@@ -2,14 +2,12 @@
 
 # pylint: disable=line-too-long, old-style-class, broad-except, too-many-instance-attributes
 
-import urllib2
-import json
 import random, sys
 from __builtin__ import globals, vars
 
 # try:
 if "Plugin" not in globals():
-    import plexpluginstub
+    # import plexpluginstub
     from plexpluginstub.stubs import *
     sys.stderr.write("Imported stub code and shouldn't have\n")
 # except:
@@ -21,11 +19,11 @@ class AudioAddict:
 
     # Valid streaming services according to audioaddict.com.
     validServices = {
-        'radiotunes': {'name':'RadioTunes.com', 'listen':'listen.radiotunes.com', 'image':'http://www.audioaddict.com/assets/client/radiotunes-c01cd3335f7f9c7d8049a7883602f1ec.jpg'},
-        'di':         {'name':'DI.fm', 'listen':'listen.di.fm', 'image':'http://www.audioaddict.com/assets/client/di-28348ac139cb6bd3144d869bcc149777.jpg'},
-        'jazzradio':  {'name':'JazzRadio.com', 'listen':'listen.jazzradio.com', 'image':'http://www.audioaddict.com/assets/client/jazz-b0e8c70e6af84ed930329f4288b13c9d.jpg'},
-        'rockradio':  {'name':'RockRadio.com', 'listen':'listen.rockradio.com', 'image':'http://www.audioaddict.com/assets/client/rock-89a0c28d5e422bff401993c77d324d7b.jpg'},
-        'classicalradio':  {'name':'ClassicalRadio.com', 'listen':'listen.classicradio.com', 'image':''}
+        'radiotunes': {'name':'RadioTunes.com', 'listen':'listen.radiotunes.com', 'image':'http://cdn.audioaddict.com/radiotunes.com/assets/android_app_banner/icon-c9f306a785072b952e1332f652164148.png'},
+        'di':         {'name':'DI.fm', 'listen':'listen.di.fm', 'image':'http://cdn.audioaddict.com/di.fm/assets/android_app_banner/icon-36f5a36bcd7f7ee5c58bdc608a006d19.png'},
+        'jazzradio':  {'name':'JazzRadio.com', 'listen':'listen.jazzradio.com', 'image':'http://cdn.audioaddict.com/jazzradio.com/assets/android_app_banner/icon-4b52d460d8aeb12041b313884379c5aa.png'},
+        'rockradio':  {'name':'RockRadio.com', 'listen':'listen.rockradio.com', 'image':'http://cdn.audioaddict.com/rockradio.com/assets/android_app_banner/icon-84075273994773d881cecfa291621a42.png'},
+        'classicalradio':  {'name':'ClassicalRadio.com', 'listen':'listen.classicradio.com', 'image':'http://cdn.audioaddict.com/classicalradio.com/assets/android_app_banner/icon-432772fa0d98d62c67155a6f99bec7df.png'}
     }
 
     # Each service proposes a selection of stream types.
