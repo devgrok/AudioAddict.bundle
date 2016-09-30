@@ -156,7 +156,7 @@ class AudioAddict(object):
     @service.setter
     def service(self, serv):
         """Set which service we're using."""
-        Log.Debug("inside setter")
+        Log.Debug("init'ing service %s", serv)
         self.p_service = serv
         if serv is None:
             self.p_service_config = {}
@@ -188,7 +188,7 @@ class AudioAddict(object):
     def serviceurl(self):
         """Get the service URL for the service we're using."""
         prefix = 'listen'
-        url = 'http://' + prefix + '.' + self.servicename()
+        url = 'http://' + prefix + '.' + self.servicename
         url = url.lower()
 
         return url
